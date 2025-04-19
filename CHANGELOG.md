@@ -2,6 +2,11 @@
 
 All notable changes to the "CodeTime" extension will be documented in this file.
 
+## v25w17
+
+- Replaced token input for codetime.dev website with Lifeforge API Host URL input.
+- Renamed this repo to Lifeforge CodeTime.
+
 ## v0.6.1
 
 [compare changes](https://github.com/Data-Trekkers/codetime-vscode/compare/v0.6.0...v0.6.1)

@@ -7,19 +7,20 @@ let codetime: CodeTime
 
 export function activate(context: vscode.ExtensionContext) {
   codetime = new CodeTime(context.globalState)
-  vscode.commands.registerCommand('codetime.getToken', () => {
-    codetime.setToken()
+  vscode.commands.registerCommand('codetime.getURL', () => {
+    codetime.setURL()
   })
   vscode.commands.registerCommand('codetime.codeTimeInStatusBar', () => {
     codetime.codeTimeInStatBar()
   })
   vscode.commands.registerCommand('codetime.toDashboard', () => {
-    const url = `https://codetime.dev/dashboard`
+    const url = `${codetime.getURL()}/code-time`
     vscode.env.openExternal(vscode.Uri.parse(url))
   })
 }
 
 export function deactivate() {
-  if (codetime)
+  if (codetime) {
     codetime.dispose()
+  }
 }

@@ -2,14 +2,15 @@
   "publisher": "Jannchie",
   "name": "codetime",
   "displayName": "CodeTime",
-  "version": "0.8.0",
-  "description": "Codetime vscode plugin. Statistical analysis of code time.",
-  "homepage": "https://github.com/Data-Trekkers/codetime-vscode#readme",
+  "version": "25w17",
+  "description": "Codetime vscode plugin (for Lifeforge). Statistical analysis of code time.",
+  "homepage": "https://docs.lifeforge.melvinchia.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Data-Trekkers/codetime-vscode"
+    "url": "https://github.com/melvinchia3636/lifeforge-codetime"
   },
   "keywords": [
+    "lifeforge",
     "code time",
     "code",
     "time",
@@ -32,16 +33,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "codetime.getToken",
-        "title": "CodeTime: Enter token"
+        "command": "codetime.getURL",
+        "title": "Lifeforge CodeTime: Enter Lifeforge API Host URL"
       },
       {
         "command": "codetime.toDashboard",
-        "title": "CodeTime: Browse dashboard"
+        "title": "Lifeforge CodeTime: Browse dashboard"
       },
       {
         "command": "codetime.codeTimeInStatusBar",
-        "title": "CodeTime: Select status bar info"
+        "title": "Lifeforge CodeTime: Select status bar info"
       }
     ],
     "configuration": {
@@ -61,11 +62,6 @@
             "Show 24h code time"
           ],
           "description": "Select the information showing in the status bar."
-        },
-        "codetime.serverEntrypoint": {
-          "type": "string",
-          "default": "https://api.codetime.dev",
-          "description": "Server entrypoint defines the URL for reporting data to a server."
         }
       }
     }
