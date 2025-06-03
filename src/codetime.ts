@@ -272,9 +272,11 @@ export class CodeTime {
       }
     }
     this.client
-      .get<{ minutes: number }>(`code-time/user/minutes?minutes=${minutes}`)
-      .then((res: { body: { minutes: any } }) => {
-        const { minutes } = res.body
+      .get<{ data: { minutes: number } }>(
+        `code-time/user/minutes?minutes=${minutes}`
+      )
+      .then((res) => {
+        const { minutes } = res.body.data
         this.statusBar.text = `$(watch) ${getDurationText(minutes * 60 * 1000)}`
         if (showSuccess) {
           vscode.window.showInformationMessage(

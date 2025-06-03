@@ -1,8 +1,8 @@
 {
-  "publisher": "Jannchie",
-  "name": "codetime",
-  "displayName": "CodeTime",
-  "version": "25w17",
+  "publisher": "Lifeforge",
+  "name": "lifeforge-codetime",
+  "displayName": "Lifeforge CodeTime",
+  "version": "0.25.24",
   "description": "Codetime vscode plugin (for Lifeforge). Statistical analysis of code time.",
   "homepage": "https://docs.lifeforge.melvinchia.dev",
   "repository": {
@@ -67,7 +67,7 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run package",
+    "vscode:prepublish": "bun run package",
     "vscode:package": "vsce package",
     "vscode:publish": "vsce package && vsce publish",
     "compile": "webpack --devtool nosources-source-map --config ./build/node-extension.webpack.config.js",
@@ -75,7 +75,7 @@
     "package": "webpack --mode production --config ./build/node-extension.webpack.config.js ",
     "test-compile": "tsc -p ./",
     "test-watch": "tsc -watch -p ./",
-    "pretest": "pnpm run test-compile && yarn run lint",
+    "pretest": "bun run test-compile && yarn run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
   },
