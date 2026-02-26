@@ -1,9 +1,9 @@
 {
   "publisher": "Lifeforge",
-  "name": "lifeforge-codetime",
-  "displayName": "Lifeforge CodeTime",
-  "version": "0.25.24",
-  "description": "Codetime vscode plugin (for Lifeforge). Statistical analysis of code time.",
+  "name": "lifeforge-devtime",
+  "displayName": "Lifeforge DevTime",
+  "version": "0.26.9",
+  "description": "Record your code grinding time in your Lifeforge instance.",
   "homepage": "https://docs.lifeforge.melvinchia.dev",
   "repository": {
     "type": "git",
@@ -12,12 +12,13 @@
   "keywords": [
     "lifeforge",
     "code time",
+    "dev time",
+    "development time",
+    "productivity",
     "code",
     "time",
     "data",
-    "wakatime",
-    "codetime",
-    "worktime"
+    "codetime"
   ],
   "categories": [
     "Other"
@@ -34,19 +35,19 @@
     "commands": [
       {
         "command": "codetime.getURL",
-        "title": "Lifeforge CodeTime: Enter Lifeforge API Host URL"
+        "title": "Lifeforge DevTime: Enter Lifeforge API Host URL"
       },
       {
         "command": "codetime.toDashboard",
-        "title": "Lifeforge CodeTime: Browse dashboard"
+        "title": "Lifeforge DevTime: Browse dashboard"
       },
       {
         "command": "codetime.codeTimeInStatusBar",
-        "title": "Lifeforge CodeTime: Select status bar info"
+        "title": "Lifeforge DevTime: Select status bar info"
       }
     ],
     "configuration": {
-      "title": "CodeTime",
+      "title": "LifeForge DevTime",
       "properties": {
         "codetime.statusBarInfo": {
           "type": "string",
@@ -85,7 +86,8 @@
     "@vscode/test-electron": "^2.2.3",
     "got": "^12.5.3",
     "os-name": "^5.1.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vsce": "^2.15.0"
   },
   "devDependencies": {
     "@jannchie/eslint-config": "^3.2.0",
